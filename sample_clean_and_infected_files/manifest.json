@@ -1,0 +1,584 @@
+{
+  "version": 1,
+  "description": "Synthetic regression examples across 9 file types and attack categories",
+  "cases": [
+    {
+      "id": "code_clean",
+      "source_type": "code",
+      "label": "clean",
+      "requests": [
+        "requests/code_clean.json"
+      ],
+      "fixtures": [
+        "fixtures/code/clean.py"
+      ],
+      "mime": "text/plain",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "allow",
+        "attacks": [],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "code_injected",
+      "source_type": "code",
+      "label": "injected",
+      "requests": [
+        "requests/code_injected.json"
+      ],
+      "fixtures": [
+        "fixtures/code/injected.py"
+      ],
+      "mime": "text/plain",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "indirect_injection",
+          "instruction_override",
+          "secret_extraction"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "docx_clean",
+      "source_type": "docx",
+      "label": "clean",
+      "requests": [
+        "requests/docx_clean.json"
+      ],
+      "fixtures": [
+        "fixtures/docx/clean.docx"
+      ],
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "allow",
+        "attacks": [],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "docx_injected",
+      "source_type": "docx",
+      "label": "injected",
+      "requests": [
+        "requests/docx_injected.json"
+      ],
+      "fixtures": [
+        "fixtures/docx/injected.docx"
+      ],
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "indirect_injection",
+          "tool_abuse"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "email_clean",
+      "source_type": "email",
+      "label": "clean",
+      "requests": [
+        "requests/email_clean.json"
+      ],
+      "fixtures": [
+        "fixtures/email/clean.eml"
+      ],
+      "mime": "message/rfc822",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "allow",
+        "attacks": [],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "email_injected",
+      "source_type": "email",
+      "label": "injected",
+      "requests": [
+        "requests/email_injected.json"
+      ],
+      "fixtures": [
+        "fixtures/email/injected.eml"
+      ],
+      "mime": "message/rfc822",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "indirect_injection",
+          "multi_step_jailbreak",
+          "secret_extraction"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "encoded_base64_injected",
+      "source_type": "text",
+      "label": "injected",
+      "requests": [
+        "requests/encoded_base64_injected.json"
+      ],
+      "fixtures": [
+        "fixtures/encoded/base64_injected.txt"
+      ],
+      "mime": "text/plain",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "encoded_instruction",
+          "indirect_injection",
+          "instruction_override",
+          "secret_extraction"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "encoded_spaced_injected",
+      "source_type": "text",
+      "label": "injected",
+      "requests": [
+        "requests/encoded_spaced_injected.json"
+      ],
+      "fixtures": [
+        "fixtures/encoded/spaced_injected.txt"
+      ],
+      "mime": "text/plain",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "encoded_instruction",
+          "indirect_injection",
+          "instruction_override",
+          "secret_extraction"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "html_clean",
+      "source_type": "html",
+      "label": "clean",
+      "requests": [
+        "requests/html_clean.json"
+      ],
+      "fixtures": [
+        "fixtures/html/clean.html"
+      ],
+      "mime": "text/html",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "allow",
+        "attacks": [],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "html_injected",
+      "source_type": "html",
+      "label": "injected",
+      "requests": [
+        "requests/html_injected.json"
+      ],
+      "fixtures": [
+        "fixtures/html/injected.html"
+      ],
+      "mime": "text/html",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "context_poisoning",
+          "indirect_injection"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "image_clean",
+      "source_type": "image",
+      "label": "clean",
+      "requests": [
+        "requests/image_clean.json"
+      ],
+      "fixtures": [
+        "fixtures/image/clean.png"
+      ],
+      "mime": "image/png",
+      "requires_ocr": true,
+      "expected": {
+        "status": "incomplete",
+        "decision": "block",
+        "attacks": [],
+        "warning_contains": "ocr_not_enabled"
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "image_injected",
+      "source_type": "image",
+      "label": "injected",
+      "requests": [
+        "requests/image_injected.json"
+      ],
+      "fixtures": [
+        "fixtures/image/injected.png"
+      ],
+      "mime": "image/png",
+      "requires_ocr": true,
+      "expected": {
+        "status": "incomplete",
+        "decision": "block",
+        "attacks": [],
+        "warning_contains": "ocr_not_enabled"
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "json_clean",
+      "source_type": "json",
+      "label": "clean",
+      "requests": [
+        "requests/json_clean.json"
+      ],
+      "fixtures": [
+        "fixtures/json/clean.json"
+      ],
+      "mime": "application/json",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "allow",
+        "attacks": [],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "json_injected",
+      "source_type": "json",
+      "label": "injected",
+      "requests": [
+        "requests/json_injected.json"
+      ],
+      "fixtures": [
+        "fixtures/json/injected.json"
+      ],
+      "mime": "application/json",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "indirect_injection",
+          "role_change"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "markdown_clean",
+      "source_type": "markdown",
+      "label": "clean",
+      "requests": [
+        "requests/markdown_clean.json"
+      ],
+      "fixtures": [
+        "fixtures/markdown/clean.md"
+      ],
+      "mime": "text/markdown",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "allow",
+        "attacks": [],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "markdown_injected",
+      "source_type": "markdown",
+      "label": "injected",
+      "requests": [
+        "requests/markdown_injected.json"
+      ],
+      "fixtures": [
+        "fixtures/markdown/injected.md"
+      ],
+      "mime": "text/markdown",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "instruction_override",
+          "secret_extraction",
+          "indirect_injection"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "pdf_clean",
+      "source_type": "pdf",
+      "label": "clean",
+      "requests": [
+        "requests/pdf_clean.json"
+      ],
+      "fixtures": [
+        "fixtures/pdf/clean.pdf"
+      ],
+      "mime": "application/pdf",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "allow",
+        "attacks": [],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "pdf_injected",
+      "source_type": "pdf",
+      "label": "injected",
+      "requests": [
+        "requests/pdf_injected.json"
+      ],
+      "fixtures": [
+        "fixtures/pdf/injected.pdf"
+      ],
+      "mime": "application/pdf",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "indirect_injection",
+          "instruction_override",
+          "secret_extraction"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "rag_clean",
+      "source_type": "rag",
+      "label": "clean",
+      "requests": [
+        "requests/rag_clean.json"
+      ],
+      "fixtures": [],
+      "mime": null,
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "allow",
+        "attacks": [],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "rag_injected",
+      "source_type": "rag",
+      "label": "injected",
+      "requests": [
+        "requests/rag_injected.json"
+      ],
+      "fixtures": [],
+      "mime": null,
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "indirect_injection",
+          "instruction_override",
+          "secret_extraction"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "session_jailbreak",
+      "source_type": "session",
+      "label": "injected",
+      "requests": [
+        "requests/session_jailbreak_step1.json",
+        "requests/session_jailbreak_step2.json"
+      ],
+      "fixtures": [],
+      "mime": null,
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "multi_step_jailbreak"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "text_clean",
+      "source_type": "text",
+      "label": "clean",
+      "requests": [
+        "requests/text_clean.json"
+      ],
+      "fixtures": [
+        "fixtures/text/clean.txt"
+      ],
+      "mime": "text/plain",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "allow",
+        "attacks": [],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "text_injected",
+      "source_type": "text",
+      "label": "injected",
+      "requests": [
+        "requests/text_injected.json"
+      ],
+      "fixtures": [
+        "fixtures/text/injected.txt"
+      ],
+      "mime": "text/plain",
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "credential_theft",
+          "indirect_injection"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "tool_clean",
+      "source_type": "tool",
+      "label": "clean",
+      "requests": [
+        "requests/tool_clean.json"
+      ],
+      "fixtures": [],
+      "mime": null,
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "allow",
+        "attacks": [],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "tool_injected",
+      "source_type": "tool",
+      "label": "injected",
+      "requests": [
+        "requests/tool_injected.json"
+      ],
+      "fixtures": [],
+      "mime": null,
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "indirect_injection",
+          "instruction_override",
+          "secret_extraction"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "web_clean",
+      "source_type": "web",
+      "label": "clean",
+      "requests": [
+        "requests/web_clean.json"
+      ],
+      "fixtures": [],
+      "mime": null,
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "allow",
+        "attacks": [],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    },
+    {
+      "id": "web_injected",
+      "source_type": "web",
+      "label": "injected",
+      "requests": [
+        "requests/web_injected.json"
+      ],
+      "fixtures": [],
+      "mime": null,
+      "requires_ocr": false,
+      "expected": {
+        "status": "complete",
+        "decision": "block",
+        "attacks": [
+          "context_poisoning",
+          "indirect_injection"
+        ],
+        "warning_contains": null
+      },
+      "provenance": "project-authored synthetic defensive test; no executable attack or actual secrets"
+    }
+  ]
+}

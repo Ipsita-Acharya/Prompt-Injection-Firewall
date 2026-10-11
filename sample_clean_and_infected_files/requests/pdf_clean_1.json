@@ -1,0 +1,10 @@
+{
+  "user_prompt": "Summarize this quarterly report.",
+  "files": [
+    {
+      "path": "../fixtures/pdf/clean_accenture-built-to-scale-pdf-report.pdf",
+      "name": "clean_accenture-built-to-scale-pdf-report.pdf",
+      "type": "application/pdf"
+    }
+  ]
+}

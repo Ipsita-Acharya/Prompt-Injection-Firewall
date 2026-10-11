@@ -1,0 +1,4 @@
+{
+  "user_prompt": "Summarize this document",
+  "files": [{"path": "report.md", "name": "report.md", "type": "text/markdown"}]
+}

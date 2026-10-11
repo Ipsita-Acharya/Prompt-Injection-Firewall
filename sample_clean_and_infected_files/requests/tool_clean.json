@@ -1,0 +1,10 @@
+{
+  "user_prompt": "Summarize this quarterly report.",
+  "content": [
+    {
+      "source": "tool",
+      "format": "json",
+      "text": "{\"result\": \"Inventory report: 45 units available\"}"
+    }
+  ]
+}
