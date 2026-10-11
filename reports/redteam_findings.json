@@ -1,0 +1,6 @@
+{
+  "cycle": 5,
+  "targets": [],
+  "candidates": [],
+  "note": "no decision-level false positives in the benign sample: the configuration is clean where it matters (finding-level noise below the policy threshold is not harm)"
+}

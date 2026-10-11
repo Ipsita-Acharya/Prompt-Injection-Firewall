@@ -1,0 +1,59 @@
+{
+  "semantic": {
+    "attack": 0.35,
+    "category": 0.45,
+    "severity": 0.5
+  },
+  "calibration_metadata": {
+    "records": 979,
+    "attack": {
+      "threshold": 0.35,
+      "precision": 0.9686,
+      "recall": 1.0,
+      "fpr": 0.0149,
+      "f1": 0.984,
+      "selection": "max-recall within FPR ceiling"
+    },
+    "per_category": {
+      "instruction_override": {
+        "threshold": 0.45,
+        "precision": 0.9518,
+        "recall": 1.0
+      },
+      "secret_extraction": {
+        "threshold": 0.9,
+        "precision": 1.0,
+        "recall": 0.8718
+      },
+      "role_change": {
+        "threshold": 0.6,
+        "precision": 0.96,
+        "recall": 0.9412
+      },
+      "credential_theft": {
+        "threshold": 0.9,
+        "precision": 1.0,
+        "recall": 0.8889
+      },
+      "tool_abuse": {
+        "threshold": 0.8,
+        "precision": 1.0,
+        "recall": 0.9524
+      },
+      "context_poisoning": {
+        "threshold": 0.65,
+        "precision": 0.973,
+        "recall": 1.0
+      },
+      "multi_step_jailbreak": {
+        "threshold": 0.85,
+        "precision": 0.9722,
+        "recall": 0.9722
+      }
+    },
+    "min_precision": 0.95,
+    "grid_start": 0.3,
+    "grid_end": 0.9,
+    "method_note": "record-level sweep on the labeled corpus; public-dataset evaluation (scripts/build_public_eval.py) is the generalization evidence"
+  }
+}

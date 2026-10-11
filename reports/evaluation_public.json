@@ -1,0 +1,149 @@
+{
+  "release_status": "public-eval: independent generalization evidence",
+  "coverage": "hybrid-demo:050c63ee75f4",
+  "datasets": {
+    "deepset-prompt-injections": {
+      "samples": 116,
+      "attack_samples": 60,
+      "benign_samples": 56,
+      "attack_recall": 0.35,
+      "attack_recall_95ci": [
+        0.2417,
+        0.4764
+      ],
+      "benign_fpr": 0.0,
+      "benign_fpr_95ci": [
+        0,
+        0.0642
+      ],
+      "per_family": {
+        "deepset-prompt-injections": {
+          "attacks": 60,
+          "caught": 21,
+          "recall": 0.35
+        }
+      },
+      "latency_median_ms": 132.8,
+      "latency_p95_ms": 761.0
+    },
+    "gandalf-ignore-instructions": {
+      "samples": 100,
+      "attack_samples": 100,
+      "benign_samples": 0,
+      "attack_recall": 0.88,
+      "attack_recall_95ci": [
+        0.8019,
+        0.93
+      ],
+      "benign_fpr": null,
+      "benign_fpr_95ci": null,
+      "per_family": {
+        "gandalf-ignore-instructions": {
+          "attacks": 100,
+          "caught": 88,
+          "recall": 0.88
+        }
+      },
+      "latency_median_ms": 96.2,
+      "latency_p95_ms": 286.3
+    },
+    "jackhhao-jailbreak-classification": {
+      "samples": 262,
+      "attack_samples": 139,
+      "benign_samples": 123,
+      "attack_recall": 0.7122,
+      "attack_recall_95ci": [
+        0.6321,
+        0.781
+      ],
+      "benign_fpr": 0.0976,
+      "benign_fpr_95ci": [
+        0.0567,
+        0.1628
+      ],
+      "per_family": {
+        "jackhhao-jailbreak-classification": {
+          "attacks": 139,
+          "caught": 99,
+          "recall": 0.7122
+        }
+      },
+      "latency_median_ms": 932.5,
+      "latency_p95_ms": 2654.5
+    },
+    "llmail-inject": {
+      "samples": 258,
+      "attack_samples": 258,
+      "benign_samples": 0,
+      "attack_recall": 0.8682,
+      "attack_recall_95ci": [
+        0.8215,
+        0.9041
+      ],
+      "benign_fpr": null,
+      "benign_fpr_95ci": null,
+      "per_family": {
+        "llmail-inject": {
+          "attacks": 258,
+          "caught": 224,
+          "recall": 0.8682
+        }
+      },
+      "latency_median_ms": 488.0,
+      "latency_p95_ms": 1396.5
+    },
+    "notinject": {
+      "samples": 113,
+      "attack_samples": 0,
+      "benign_samples": 113,
+      "attack_recall": null,
+      "attack_recall_95ci": null,
+      "benign_fpr": 0.115,
+      "benign_fpr_95ci": [
+        0.0685,
+        0.1869
+      ],
+      "per_family": {},
+      "latency_median_ms": 145.3,
+      "latency_p95_ms": 291.7
+    }
+  },
+  "unavailable": [],
+  "freeze_manifest": {
+    "deepset-prompt-injections": {
+      "rows": 116,
+      "sha256": "0a12efdd83032fbc",
+      "frozen_at": "2026-10-11"
+    },
+    "gandalf-ignore-instructions": {
+      "rows": 100,
+      "sha256": "624b33738557f59f",
+      "frozen_at": "2026-10-11"
+    },
+    "jackhhao-jailbreak-classification": {
+      "rows": 262,
+      "sha256": "e1c22145e0a92ae0",
+      "frozen_at": "2026-10-11"
+    },
+    "llmail-inject": {
+      "rows": 258,
+      "sha256": "1d27ce2d73fa5488",
+      "frozen_at": "2026-10-11"
+    },
+    "notinject": {
+      "rows": 113,
+      "sha256": "df6130519e75584c",
+      "frozen_at": "2026-10-11"
+    }
+  },
+  "provenance": {
+    "source": "Hugging Face datasets-server rows API",
+    "held_out": "these datasets were never used for training; RULE-023's deepset provenance is disclosed in README.md",
+    "note": "binary attack/benign labels; per-family recall published including misses",
+    "labeling_philosophy": "deepset marks in-context roleplay setups ('act as an interviewer') and out-of-context harmful requests ('generate SQL') as injections; this firewall deliberately requires attack evidence in the text itself, so a residual miss rate on those families is a labeling-scope difference, not a detection bug \u2014 the published number includes them regardless"
+  },
+  "timing": {
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.14.7"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "enabled": false,
+  "hour": 2,
+  "interval_hours": 24,
+  "corpus": "demo",
+  "last_run_date": "2026-10-11",
+  "last_run_ts": 1791721360.6119874,
+  "last_fingerprint": "c783499da7f622e6e3fab9e969b4c7bf0d5bd6936d8f14e8ec658effb441dd16",
+  "last_result": {
+    "when": "2026-10-11 17:52:40",
+    "trigger": "manual",
+    "outcome": "completed",
+    "seconds": 1.9,
+    "cycle": 5,
+    "targets": [],
+    "candidates_queued": 0,
+    "note": "no decision-level false positives in the benign sample: the configuration is clean where it matters (finding-level noise below the policy threshold is not harm)"
+  }
+}

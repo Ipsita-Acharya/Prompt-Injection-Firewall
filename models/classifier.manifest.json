@@ -1,0 +1,10 @@
+{
+  "sha256": "050c63ee75f49e2c4899ad1dcf0451edaa968acba76db85c223d30382d65cafd",
+  "dataset_sha256": "21381409b2a27c6b26a84e6a67e9dda04d1a701273ca49e678bfff3d9907b02c",
+  "extra_dataset_sha256": null,
+  "extra_samples": 0,
+  "training_samples": 979,
+  "seed": 42,
+  "kind": "tfidf-logistic-regression",
+  "warning": "Trained on the corpus train split with dataset ground-truth labels; test split held out. Independent provenance review still required before any production claim."
+}

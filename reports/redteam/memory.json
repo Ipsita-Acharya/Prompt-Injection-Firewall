@@ -1,0 +1,165 @@
+{
+  "cycles": [
+    {
+      "cycle": 1,
+      "targets": [
+        "RULE-007"
+      ],
+      "candidates": [
+        {
+          "rule_id": "RULE-007",
+          "victims": 3,
+          "attempts": [
+            {
+              "weight": 0.75,
+              "verdict": "rejected",
+              "false_positives_before": 3,
+              "false_positives_after": 3,
+              "new_benign_victims": [],
+              "lost_protection": [],
+              "seconds": 0.5
+            },
+            {
+              "weight": 0.6,
+              "verdict": "rejected",
+              "false_positives_before": 3,
+              "false_positives_after": 3,
+              "new_benign_victims": [],
+              "lost_protection": [],
+              "seconds": 0.5
+            },
+            {
+              "weight": 0.5,
+              "verdict": "accepted",
+              "false_positives_before": 3,
+              "false_positives_after": 0,
+              "new_benign_victims": [],
+              "lost_protection": [],
+              "seconds": 0.5
+            }
+          ],
+          "pending_id": "CAND-0001"
+        }
+      ]
+    },
+    {
+      "cycle": 2,
+      "targets": [],
+      "candidates": []
+    },
+    {
+      "cycle": 3,
+      "targets": [
+        "RULE-007"
+      ],
+      "candidates": [
+        {
+          "rule_id": "RULE-007",
+          "victims": 3,
+          "attempts": [
+            {
+              "weight": 0.75,
+              "verdict": "rejected",
+              "false_positives_before": 3,
+              "false_positives_after": 3,
+              "new_benign_victims": [],
+              "lost_protection": [],
+              "seconds": 0.5
+            },
+            {
+              "weight": 0.6,
+              "verdict": "rejected",
+              "false_positives_before": 3,
+              "false_positives_after": 3,
+              "new_benign_victims": [],
+              "lost_protection": [],
+              "seconds": 0.5
+            },
+            {
+              "weight": 0.5,
+              "verdict": "rejected",
+              "false_positives_before": 3,
+              "false_positives_after": 3,
+              "new_benign_victims": [],
+              "lost_protection": [],
+              "seconds": 0.5
+            },
+            {
+              "weight": 0.45,
+              "verdict": "rejected",
+              "false_positives_before": 3,
+              "false_positives_after": 3,
+              "new_benign_victims": [],
+              "lost_protection": [],
+              "seconds": 0.5
+            },
+            {
+              "weight": 0.35,
+              "verdict": "rejected",
+              "false_positives_before": 3,
+              "false_positives_after": 3,
+              "new_benign_victims": [],
+              "lost_protection": [],
+              "seconds": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 4,
+      "targets": [],
+      "candidates": []
+    },
+    {
+      "cycle": 5,
+      "targets": [],
+      "candidates": []
+    }
+  ],
+  "failed_hypotheses": [
+    {
+      "rule_id": "RULE-007",
+      "weight": 0.75,
+      "reason": "rejected",
+      "cycle": 1
+    },
+    {
+      "rule_id": "RULE-007",
+      "weight": 0.6,
+      "reason": "rejected",
+      "cycle": 1
+    },
+    {
+      "rule_id": "RULE-007",
+      "weight": 0.75,
+      "reason": "rejected",
+      "cycle": 3
+    },
+    {
+      "rule_id": "RULE-007",
+      "weight": 0.6,
+      "reason": "rejected",
+      "cycle": 3
+    },
+    {
+      "rule_id": "RULE-007",
+      "weight": 0.5,
+      "reason": "rejected",
+      "cycle": 3
+    },
+    {
+      "rule_id": "RULE-007",
+      "weight": 0.45,
+      "reason": "rejected",
+      "cycle": 3
+    },
+    {
+      "rule_id": "RULE-007",
+      "weight": 0.35,
+      "reason": "rejected",
+      "cycle": 3
+    }
+  ],
+  "next_candidate_id": 2
+}

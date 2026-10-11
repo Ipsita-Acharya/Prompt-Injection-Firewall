@@ -1,0 +1,248 @@
+/* GenWizard replica styling — light theme matching templates/Genwizard.png:
+ * white app, floating lavender header pills (brand + actions left,
+ * Canvas/chatbot + app icons right), centered greeting, prompt pill with the
+ * light-purple send circle. The saved snapshot lost all runtime-injected MUI
+ * styles, so this sheet restyles the surviving DOM. */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #ffffff;
+  color: #1c1b1f;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  overflow: hidden;
+}
+
+#root, .mui-1cdq6zk {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* ---------- header pills ---------- */
+.gw-header {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 0;
+}
+
+.gw-pill {
+  display: flex;
+  align-items: center;
+  background: #f8f3fb;
+  border-radius: 24px;
+  height: 44px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+.gw-pill-left {
+  gap: 26px;
+  padding: 0 16px 0 10px;
+}
+.gw-pill-right {
+  gap: 26px;
+  padding: 0 18px;
+}
+
+/* brand: purple logo + name (snapshot classes .mui-k0ga8k / .mui-6choxn) */
+.mui-k0ga8k {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.mui-k0ga8k svg {
+  width: 22px;
+  height: 31px;
+  flex: 0 0 auto;
+}
+.mui-k0ga8k .mui-6choxn {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #171717;
+  white-space: nowrap;
+}
+
+/* sidebar-toggle + new-chat icon buttons */
+.gw-pill-left .mui-1xhj18k {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.gw-pill-left .mui-1xhj18k > div,
+.gw-pill-left .mui-1xhj18k button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.gw-pill-left .mui-1xhj18k svg {
+  width: 19px;
+  height: 19px;
+}
+
+/* Canvas / chatbot wordmarks */
+.gw-canvas {
+  font-size: 16px;
+  font-weight: 700;
+  color: #171717;
+  white-space: nowrap;
+}
+.gw-chatbot {
+  font-size: 16px;
+  font-weight: 700;
+  color: #7a3bf0;
+  white-space: nowrap;
+}
+
+/* legacy chat bubble, app grid, profile icons */
+.gw-pill-right .MuiIconButton-root,
+.gw-pill-right button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #3c3f43;
+  display: flex;
+  align-items: center;
+}
+.gw-pill-right svg.MuiSvgIcon-root {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.gw-pill-right img {
+  display: none;
+}
+
+/* ---------- main area ---------- */
+.mui-qy22cp {
+  flex: 1 1 auto;
+  position: relative;
+  min-height: 0;
+  background: #ffffff;
+}
+.mui-qy22cp > div:first-child {
+  position: static !important;
+  width: auto !important;
+  height: 100% !important;
+  opacity: 1 !important;
+}
+.mui-1kadikm {
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px 4vh;
+  box-sizing: border-box;
+}
+.mui-dl4het {
+  width: min(444px, 100%);
+}
+.mui-1qcmo6 {
+  margin: 0 0 38px;
+  font-size: 34px;
+  font-weight: 600;
+  color: #1a1c1e;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ---------- prompt pill ---------- */
+.mui-195rqv8 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #f8f3fb;
+  border: 1px solid #f1e8f8;
+  border-radius: 24px;
+  padding: 4px 5px 4px 10px;
+  transition: border-color 0.15s;
+}
+.mui-195rqv8:focus-within {
+  border-color: #d9b8fb;
+}
+.mui-195rqv8 > .mui-k008qs {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.mui-1i78lfc {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  min-width: 0;
+}
+.mui-1juu494 {
+  flex: 1 1 auto;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #1c1b1f;
+  font-size: 13.5px;
+  font-family: inherit;
+  padding: 11px 4px;
+  min-width: 0;
+}
+.mui-1juu494::placeholder {
+  color: #a9a2b0;
+}
+.mui-1i78lfc .pif-attach {
+  order: -1; /* attachment icon sits at the left inside the pill */
+  background: none;
+  border: none;
+  color: #8b8f96;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 6px 8px 0;
+  line-height: 1;
+}
+.mui-1i78lfc .pif-attach:hover {
+  color: #7a3bf0;
+}
+.mui-px4diu {
+  flex: 0 0 auto;
+  display: flex;
+}
+.mui-px4diu .mui-1iw28ht {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: #d5b3f7;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.15s;
+}
+.mui-px4diu .mui-1iw28ht:hover {
+  background: #c79bf5;
+}
+.mui-px4diu .mui-1iw28ht svg {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+}
+
+/* generic */
+.MuiIconButton-root {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

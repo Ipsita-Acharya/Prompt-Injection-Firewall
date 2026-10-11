@@ -1,0 +1,21 @@
+{
+  "pending": [
+    {
+      "id": "CAND-0001",
+      "created": "2026-10-10T17:03:33Z",
+      "kind": "rule_weight",
+      "rule_id": "RULE-007",
+      "override": {
+        "weight": 0.5
+      },
+      "corpus": "data\\samples\\redteam_demo\\eval_demo.jsonl",
+      "evidence": {
+        "false_positives_before": 3,
+        "false_positives_after": 0,
+        "lost_protection": [],
+        "new_benign_victims": []
+      },
+      "status": "pending"
+    }
+  ]
+}

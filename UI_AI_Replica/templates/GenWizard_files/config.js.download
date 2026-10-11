@@ -1,0 +1,50 @@
+/**
+ * This is an external configuration file that can be accessed
+ * even after the docker container is built. See this projects Dockerfile
+ * for more information.
+ */
+window.config = {
+  saml: {
+    /**
+     * generateSAMLSigninUrl
+     * @param relayUrl {String} the URL to send the SAML provider to if successfully authenticated
+     * @return {String} The redirection to SAML signin page with relayUrl
+     */
+    generateSAMLSigninUrl: (relayUrl) => {
+      const samlUrl =
+        'https://aiam.accenture.com/openam/saml2/jsp/applogin.jsp';
+      return `${samlUrl}?relay=${relayUrl}`;
+    },
+    /**
+     * generateSAMLSignoutUrl
+     * @return {String} URL of the SAML signout page
+     */
+    generateSAMLSignoutUrl: () => {
+      return 'https://federation-sts-stage.accenture.com/adfs/ls/?wa=wsignout1.0';
+    }
+  },
+  url: {
+    origin: window.location.origin,
+    gateway: '/atr-gateway',
+    tickets: '/atr',
+    knowledgebase: '/kb',
+    'identity-management': '/identity-management',
+    'machine-learning': '/ingrain-core',
+    wfm: '/wfm',
+    ata: '/ata',
+    mp: '/marketplace'
+  },
+  /**
+   * Configuration boolean flags for the application
+   * if not enabled (false) then will fall back to using REST
+   * HOMEPAGE: the homepage of the application that the user will be send to after authentication
+   */
+  app: {
+    HOMEPAGE_ADMIN: '/',
+    HOMEPAGE_USER: '/',
+    canvas: {
+      collaborationEnabled: true,
+      autosaveEnabled: true
+    }
+  }
+};
