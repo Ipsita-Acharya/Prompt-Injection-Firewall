@@ -405,26 +405,6 @@ Dockerfile            non-root image with Tesseract
 FLOW_DIAGRAM.md       complete flow documentation (system map → micro-flows with examples)
 ```
 
-## Provenance and prior art (disclosure)
-
-Mechanisms adopted after studying peer submissions are disclosed here; each is integrated into this codebase's architecture, not vendored:
-
-| Mechanism | Adopted from | Where it lives here |
-| --- | --- | --- |
-| Per-character PDF hidden-text triage | SiddharthBhaduka18 | `pif/input/parsers/pdf.py` |
-| DOCX run-level vanish/tiny/white flags | SiddharthBhaduka18 | `pif/input/parsers/docx.py` |
-| Two-pass faint-text OCR | SiddharthBhaduka18 | `pif/input/ocr.py` |
-| Sanitize escalation + survivor spotlighting | SiddharthBhaduka18 | `pif/policy.py` |
-| View-differential encoding evidence | Nilaksh-MIB `ObfuscationDetector.cs` | `pif/detection/encoded.py` |
-| Escalation-only fail-closed AI | Nilaksh-MIB | `pif/detection/llm_judge.py` |
-| Canary detonation | Shivamjohri247 `detonator.py` | `pif/detonation.py` (offline emulator decoy + full-band operation added here) |
-| DNS-rebinding-safe URL pinning | Shivamjohri247 `main.py` | `pif/fetch.py` |
-| Public dataset IDs & split discipline | Shivamjohri247 `backend/eval/build_sets.py` | `scripts/build_public_eval.py` |
-| Hiding bonus + matched-twin benchmark design | stas4000 | `pif/risk.py`, `scripts/generate_corpus.py` |
-| Conservative normalization + quoted-instruction revocation | saidhinu | `pif/normalization.py`, `pif/detection/rules.py` |
-
-Original to this codebase: the explainable risk-fusion model, the span-redaction policy engine, the supervised self-tuning loop + FN probe driver with human gates, the admin portal + AI-replica demo proxy, the output-side leak guard, the offline detonation emulator, and the full observability stack.
-
 ## Mapping to the hackathon evaluation framework
 
 | Rubric parameter | Where PIF evidences it |
