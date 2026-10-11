@@ -10,7 +10,7 @@ A working, local, fail-closed firewall for AI agents: it inspects **every** piec
 
 ---
 
-## Table of contents
+## Table of contents 
 
 1. [The problem](#the-problem)
 2. [What PIF does](#what-pif-does)
