@@ -437,5 +437,3 @@ Original to this codebase: the explainable risk-fusion model, the span-redaction
 | Business / user impact | Drops-in as a proxy/library for any LLM app; blocks exfiltration and unauthorized tool use while preserving benign content — measurable risk reduction with published FPR |
 | Prototype quality & usability | One-click `RUN.bat`, three UIs, five-minute scripted demo, ready-made clean/infected fixtures, `/docs` OpenAPI |
 | Scalability, Responsible AI & robustness | Concurrent scan/parser workers, loopback auth posture, quarantine + audit DB, redacted bounded logs, published misses, honest limitations, human-in-the-loop policy changes |
-
-**Final submission components:** the working demo is `scripts/demo.py` (+ `UI_AI_Replica` and the admin portal for the browser walkthrough); the detailed structural architecture is [FLOW_DIAGRAM.md](FLOW_DIAGRAM.md) — process flow, key actions, decisions, model usage, and feature incorporation, phase by phase.
