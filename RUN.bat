@@ -1,3 +1,13 @@
+python -m pip install -r requirements.txt
+python -m pip install httpx==0.28.1
+python -m pip install uvicorn==0.54.0
+python -m pip install fastapi==0.142.2
+python -m pip install markdown-it-py==4.2.0
+python -m pip install scipy==1.15.3
+python -m pip install scipy==1.18.1
+python -m pip install scikit-learn==1.9.1
+
+
 @echo off
 REM ============================================================
 REM  Prompt Injection Firewall - one-click launcher
@@ -57,7 +67,7 @@ timeout /t 6 /nobreak >nul
 echo [RUN] Opening web pages in the default browser ...
 start "" http://127.0.0.1:8081
 start "" http://127.0.0.1:8080
-start "" http://127.0.0.1:8000/docs
+:: start "" http://127.0.0.1:8000/docs
 
 echo.
 echo [RUN] Launcher finished.
