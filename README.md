@@ -68,10 +68,10 @@ PIF is not a chatbot and not an agent — it is the **security boundary between 
    UNTRUSTED CONTENT                          PIF                      PROTECTED SIDE
    ─────────────────                          ───                      ──────────────
    user messages ──────┐
-   web pages ──────────┤   guarded fetch     │
+   web pages ──────────┤   guarded fetch      │
    PDF / DOCX / email ─┤   + parsers          │   allowed /           ┌──────────────┐
    HTML / Markdown ────┤   + hidden-channel   │   sanitized           │  LLM / agent │
-   JSON / API resp. ───┼───forensics──────────┼───content only──────►│              │
+   JSON / API resp. ───┼───forensics──────────┼───content only──────► │              │
    OCR text / images ──┤                      │                       └──────┬───────┘
    source code ────────┘                      │                              │
                                               │      ┌───────────────────────┤
